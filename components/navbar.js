@@ -8,26 +8,26 @@ const Navbar = () => {
         @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&family=Archivo+Black&family=Work+Sans&display=swap');
         nav {
             width: 100vw;
-            height: 40px;
+            height: 50px;
             margin: 0;
             padding: 0;
-            display: block;
-            animation: waves 8s infinite;
-          }
-
-         
-          #name {
-            padding: 1em;
             display: flex;
-            letter-spacing: 1px;
-            font-style: bold;
-            font-size: 20px;
+            flex-direction: column;
             text-align: center;
             justify-content: center;
             align-content: center;
+            animation: waves 8s infinite;
+          }
+
+          #name {
+            padding: .5em;
+            letter-spacing: 1px;
+            font-style: bold;
+            font-size: 30px;
             font-family: 'Archivo Black', sans-serif;
             text-transform: uppercase;
             font-weight: 800;
+            opacity: 1;
             animation: waves 8s ease-out 0s alternate infinite;
           }
           @keyframes waves{
@@ -44,41 +44,62 @@ const Navbar = () => {
              color: #FF4136;
             }
           }
-          li {
-            margin: 1em;
-            text-align: right;
-            letter-spacing: 3px;
-            align-content:center;
+
+          ul{
+            display: flex;
+            flex-direction:row;
+            margin: 0;
+            padding: 0;
             justify-content: center;
+
+          }
+          li {
+            text-align: center;
+            letter-spacing: 3px;
             font-weight: 800;
+            margin-right: 5em;
+            text-transform: uppercase;
+            list-style-type: none;
           }
           a {
             text-decoration: none;
-            text-transform: lowercase;
             color:white;
             font-size: 14px;  
             font-family: 'work sans',sans-serif;
           }
-          a::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: rgba(0,0,0,.7);
-            transition .1s;
-        }
-        a:hover{
-          color: orange;
-          transition: 3s ease;
-        }
+
+          a:hover{
+            color: orange;
           }
+         
+
         `}
       </style>
-      <Link href='/'>
-        <a id='name' title='Home'>
-          Menu
+  
+      <ul>
+      <li><Link href='/#watch'>
+        <a title='Watch'>
+          Watch
         </a>
       </Link>
+      </li>
+      <li>
+      <Link href='/#awards'>
+        <a title='Awards'>
+          Awards
+        </a>
+      </Link>
+      </li>
+      <li>
+      <Link href='/#crew'>
+        <a title='crew'>
+          Crew
+        </a>
+      </Link>
+      </li>
+      </ul>
+      
+      
     </nav>
   )
 }

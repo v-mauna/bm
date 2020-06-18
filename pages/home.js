@@ -1,12 +1,14 @@
-import Head from 'next/head'
-import Stills from '../sections/stills'
-import BgImg from '../images/IMG_0085.jpeg'
+import Head from 'next/head';
+import ReactPlayer from 'react-player';
+import BgImg from '../images/IMG_0085.jpeg';
+import Crew from '../sections/crew'
 
 const Home = () => (
-  <div className='container'>
-    <style jsx>
-      {`
-        @import '~video-react/styles/scss/video-react' @import
+	<div className="container">
+		<style jsx>
+			{`
+        @import '~video-react/styles/scss/video-react' 
+        @import
           url('https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans&family=Lexend+Tera&family=Archivo+Blackdisplay=swap');
         .container {
           display: flex;
@@ -15,7 +17,7 @@ const Home = () => (
           font-size: 16px;
           width: 100vw;
           margin-top: 1em;
-          line-height: 2em;
+          line-height: 1.5em;
         }
         header {
           display: flex;
@@ -27,6 +29,7 @@ const Home = () => (
           background-repeat: no-repeat;
           margin: 0;
           box-sizing: border-box;
+          animation: slide-left 1s;
         }
 
         .content {
@@ -38,7 +41,6 @@ const Home = () => (
           flex-direction: column;
           height: 60vw;
           justify-content: center;
-
           text-align: center;
         }
 
@@ -49,58 +51,84 @@ const Home = () => (
           postion: absolute;
           top: 0;
           font-size: 40px;
-          transition; 
+          animation: slide-left 2s;
         }
         .content p {
           font-family: 'Work Sans', sans-serif;
           font-size: 16px;
           color: white;
           postion: relative;
+          animation: slide-left 3s;
         }
         .content a {
           color: white;
+          background: black;
           font-size: 12px;
-          width: 100px;
+          width: 200px;
+          margin-top: 2em;
+          text-align: center;
           text-decoration: none;
-          border: 3px solid white;
+          text-transform: uppercase;
           padding: 1em;
+          postion: relative;
+          animation: slide-left 3s;
+        }
+
+        @keyframes slide-left{
+          from {
+            margin-left: 100%;
+            width: 300%; 
+          }
+        
+          to {
+            margin-left: 0%;
+            width: 100%;
+          }
+        }
         }
 
         .content a:hover {
-          color: rgb(207, 217, 48);
           background: white;
-        }
+          color: black;
 
-        .slider {
-          postion: relative;
-          overflow: hidden;
-          height: 50vh;
+        }
+        .break{
+          height: 2em;
+        }
+        #movie-player {
+          opacity: 0
           width: 100vw;
+          height: 100vh;
+          background: black;
+          padding: 0;
+          background-size: cover;
+          background-repeat: no-repeat;
+          margin: 0;
+          box-sizing: border-box;
         }
 
-        .slider h3 {
-          color: white;
-        }
       `}
-    </style>
-    <Head>
-      <script
-        src='https://kit.fontawesome.com/6f92a9206c.js'
-        crossOrigin='anonymous'
-      />
-      <meta name='description' content='' />
-      <title>Burning Man</title>
-    </Head>
-    <header>
-      <div className='content'>
-        <h2>Burning Man:The Build</h2>
-        <p> a short film about the art of Burning Man</p>
+		</style>
+		<Head>
+			<script src="https://kit.fontawesome.com/6f92a9206c.js" crossOrigin="anonymous" />
+			<meta name="description" content="" />
+			<title>Burning Man</title>
+		</Head>
+		<header>
+			<div className="content">
+				<h2>Burning Man:The Build</h2>
+				<p>
+					{' '}
+					a short film about the art of Burning Man
+					<div className="break" />
+          <a href="https://mattemmi.s3.amazonaws.com/1767551805.mp4">Watch</a>
+				</p>
       </div>
-    </header>
-    <section className='slider'>
-      <h3>Behind The Scenes</h3>
-    </section>
-  </div>
-)
+		</header>
+		<section id="crew">
+			<Crew/>
+		</section>
+	</div>
+);
 
-export default Home
+export default Home;

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint ./ --ignore-path .gitignore"
   },
   "dependencies": {
     "@moxy/next-common-files": "^1.2.2",
@@ -14,10 +15,19 @@
     "next-images": "^1.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-player": "^2.3.1",
-    "video-react": "^0.14.1"
+    "react-player": "^2.3.1"
   },
   "devDependencies": {
-    "next-videos": "1.1.4"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-fullstack": "^6.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "next-videos": "1.1.4",
+    "prettier": "^2.0.5"
   }
 }
