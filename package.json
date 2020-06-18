@@ -1,0 +1,23 @@
+{
+  "name": "burningman",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@moxy/next-common-files": "^1.2.2",
+    "next": "9.4.4",
+    "next-compose-plugins": "^2.2.0",
+    "next-images": "^1.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-player": "^2.3.1",
+    "video-react": "^0.14.1"
+  },
+  "devDependencies": {
+    "next-videos": "1.1.4"
+  }
+}
