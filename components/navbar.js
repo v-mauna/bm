@@ -97,6 +97,11 @@ const Navbar = () => {
         </a>
       </Link>
       </li>
+      <li>
+        <a href='http://www.ignitemovie.com' title='Ignite Movie'>
+          Ignite
+        </a>
+      </li>
       </ul>
       
       

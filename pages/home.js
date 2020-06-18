@@ -2,17 +2,18 @@ import Head from 'next/head';
 import ReactPlayer from 'react-player';
 import BgImg from '../images/IMG_0085.jpeg';
 import Crew from '../sections/crew'
+import Awards from '../sections/awards'
 
 const Home = () => (
 	<div className="container">
 		<style jsx>
 			{`
-        @import '~video-react/styles/scss/video-react' 
         @import
           url('https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans&family=Lexend+Tera&family=Archivo+Blackdisplay=swap');
         .container {
           display: flex;
           flex-wrap: wrap;
+          flex-shrink: 1;
           box-sizing: border-box;
           font-size: 16px;
           width: 100vw;
@@ -95,17 +96,10 @@ const Home = () => (
         .break{
           height: 2em;
         }
-        #movie-player {
-          opacity: 0
-          width: 100vw;
-          height: 100vh;
-          background: black;
-          padding: 0;
-          background-size: cover;
-          background-repeat: no-repeat;
-          margin: 0;
-          box-sizing: border-box;
+        #awards{
+          background: #eef;
         }
+
 
       `}
 		</style>
@@ -125,9 +119,13 @@ const Home = () => (
 				</p>
       </div>
 		</header>
+    <section id="awards">
+			<Awards/>
+		</section>
 		<section id="crew">
 			<Crew/>
 		</section>
+    
 	</div>
 );
 
