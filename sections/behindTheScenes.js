@@ -1,10 +1,25 @@
 import Head from 'next/head';
-import img1 from '../images/FJX17202.jpg';
-import img2 from '../images/IMG_2527.jpg';
-import img3 from '../images//IMG_6036.jpg';
-import img4 from '../images/IMG_0124.jpeg';
-import img5 from '../images/IMG_0128.jpeg';
-const Crew = () => (
+import Image1 from '../images/FJX17202.jpg';
+import Image2 from '../images/IMG_0090.jpeg';
+import Image3 from '../images/IMG_0124.jpeg';
+import Image4 from '../images/IMG_0128.jpeg';
+import Image5 from '../images/IMG_0139.jpeg';
+import Image6 from '../images/IMG_0143.jpeg';
+import Image7 from '../images/IMG_6019.jpg';
+import Image8 from '../images/IMG_6036.jpg';
+
+const imgsArray = [
+  Image1,
+  Image2,
+  Image3,
+  Image4,
+  Image5,
+  Image6,
+  Image7,
+  Image8,
+];
+
+const BehindTheScenes = () => (
   <div className="container">
     <style jsx>
       {`
@@ -16,44 +31,43 @@ const Crew = () => (
           box-sizing: border-box;
           font-size: 16px;
           width: 100vw;
+          height: auto;
           margin-top: 1em;
+          line-height: 1.5em;
+        }
+
+        .behindTheScenes{
+          position: relative;
           justify-content: center;
           text-align: center;
           align-content: center;
-          line-height: 1.5em;
-        }
-        .content {
           display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
+          width: 100vw;
+          background: #eef;
+          flex-direction: row;
+          padding: 1;
+          margin: 1;
+          box-sizing: border-box;
+          animation: slide-left 1s;
+        }
+
+        .content {
+            margin-top: 2em;
           font-family: 'Work Sans', sans-serif;
           font-weight: 800;
           letter-spacing: 3px;
           width: 100vw;
           height: auto;
-          padding: 1em;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          color: black;
           justify-content: center;
           text-align: center;
           align-content: center;
           animation: slide-left 1s;
         }
 
-        .content h2 {
-          color: white;
-          font-family: 'Work Sans', sans-serif;
-          text-transform: uppercase;
-          postion: absolute;
-          top: 0;
-          font-size: 40px;
-          animation: slide-left 2s;
-        }
-        .content p {
-          font-family: 'Work Sans', sans-serif;
-          font-size: 16px;
-          color: white;
-          postion: relative;
-          animation: slide-left 3s;
-        }
         @keyframes slide-left{
             from {
               margin-left: 100%;
@@ -64,6 +78,12 @@ const Crew = () => (
               width: 100%;
             }
             }
+        }
+
+        .content img{
+            width: 300px;
+            height: 300px;
+           padding: 1.5em;
         }
         
       `}
@@ -76,20 +96,16 @@ const Crew = () => (
       <meta name="description" content="" />
       <title>Burning Man</title>
     </Head>
-    <section>
+    <section className="behindTheScenes">
       <div className="content">
-        <h2>Crew</h2>
-        <p>
-          AERIAL FOOTAGE: Matt Emmi<br/>
-          FEATURING FOOTAGE FROM: Ignite: A Burning Man Experience<br/>
-          ADDITIONAL FOOTAGE FROM: Adrenorama Mayan Warrior<br/>
-          MUSIC: Ezio Aguiar<br/>
-          AUDIO ENGINEER: Asha Iwanowicz<br/>
-         PRODUCER/NARRATOR/EDITOR: Eddie Schneckloth<br/>
-        </p>
+        {imgsArray.map((image) => (
+          <div>
+            <img src={image} alt="Behind The Scenes Image" />
+          </div>
+        ))}
       </div>
     </section>
   </div>
 );
 
-export default Crew;
+export default BehindTheScenes;

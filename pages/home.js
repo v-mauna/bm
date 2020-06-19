@@ -1,8 +1,10 @@
 import Head from 'next/head';
-import ReactPlayer from 'react-player';
+import Link from 'next/link'
 import BgImg from '../images/IMG_0085.jpeg';
 import Crew from '../sections/crew'
 import Awards from '../sections/awards'
+import BehindTheScenes from '../sections/behindTheScenes';
+
 
 const Home = () => (
 	<div className="container">
@@ -40,7 +42,7 @@ const Home = () => (
           width: 100vw;
           display: flex;
           flex-direction: column;
-          height: 60vw;
+          height:100vh;
           justify-content: center;
           text-align: center;
         }
@@ -105,6 +107,7 @@ const Home = () => (
 		</style>
 		<Head>
 			<script src="https://kit.fontawesome.com/6f92a9206c.js" crossOrigin="anonymous" />
+      <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
 			<meta name="description" content="" />
 			<title>Burning Man</title>
 		</Head>
@@ -115,7 +118,9 @@ const Home = () => (
 					{' '}
 					a short film about the art of Burning Man
 					<div className="break" />
-          <a href="https://mattemmi.s3.amazonaws.com/1767551805.mp4">Watch</a>
+          <Link href='/watch'>
+          <a title='Watch'>Watch</a>
+          </Link>
 				</p>
       </div>
 		</header>
@@ -124,6 +129,9 @@ const Home = () => (
 		</section>
 		<section id="crew">
 			<Crew/>
+		</section>
+    <section id="behindTheScenes">
+			<BehindTheScenes/>
 		</section>
     
 	</div>

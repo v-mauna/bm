@@ -5,29 +5,28 @@ const Awards = () => (
 				@import 'https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans&family=Lexend+Tera&family=Archivo+Blackdisplay=swap';
 				.container {
 					display: flex;
+					flex-direction: column;
 					flex-wrap: wrap;
 					box-sizing: border-box;
 					font-size: 16px;
                     width: 100vw;
                     margin: auto;
-                    align-content: center;
-                    justify-content: center;
 					line-height: 1.5em;
-					background: transparent;
 				}
 
 				.laurels {
                     display: flex;
                     flex-wrap: wrap;
-					font-family: 'Work Sans', sans-serif;
-					font-weight: 800;
 					letter-spacing: 3px;
 					width: 100vw;
-                    height: auto;   
+					height: auto;
+					align-content: center;
+                    justify-content: center;  
 				}
 
 				.laurels img {
 					width: 180px;
+					height: 140px;
                     padding: 2em;;
                 }
                 .laurels img:first-child{

@@ -10,6 +10,7 @@ const Navbar = () => {
             width: 100vw;
             height: 50px;
             margin: 0;
+            background: black;
             padding: 0;
             display: flex;
             flex-direction: column;
@@ -77,7 +78,14 @@ const Navbar = () => {
       </style>
   
       <ul>
-      <li><Link href='/#watch'>
+      <li>
+        <Link href='/'>
+        <a title='Home'>
+          Home
+        </a>
+      </Link>
+      </li>
+      <li><Link href='/watch'>
         <a title='Watch'>
           Watch
         </a>
@@ -96,11 +104,6 @@ const Navbar = () => {
           Crew
         </a>
       </Link>
-      </li>
-      <li>
-        <a href='http://www.ignitemovie.com' title='Ignite Movie'>
-          Ignite
-        </a>
       </li>
       </ul>
       
