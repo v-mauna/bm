@@ -24,7 +24,7 @@ const BehindTheScenes = () => (
     <style jsx>
       {`
       @import
-       url('https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans&family=Lexend+Tera&family=Archivo+Blackdisplay=swap');
+       url('https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans&family=Lexend+Tera&family=Archivo+Black&display=swap');
         .container {
           display: flex;
           flex-wrap: wrap;

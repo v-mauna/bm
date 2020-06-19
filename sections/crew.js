@@ -8,8 +8,7 @@ const Crew = () => (
   <div className="container">
     <style jsx>
       {`
-      @import
-       url('https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans&family=Lexend+Tera&family=Archivo+Blackdisplay=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans&family=Lexend+Tera&family=Archivo+Black&display=swap');
         .container {
           display: flex;
           flex-wrap: wrap;
