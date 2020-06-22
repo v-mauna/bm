@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import Img from '../images/IMG_0102.jpeg'
+import swapDivs from '../helperFuncs/swap'
+
 const Navbar = () => {
   return (
     <nav>
@@ -31,20 +33,6 @@ const Navbar = () => {
             opacity: 1;
             animation: waves 8s ease-out 0s alternate infinite;
           }
-          @keyframes waves{
-            0% {
-             color: #001F3F;
-            }
-            25%{
-              color: #eee;
-            }
-            50%{
-             color: orange;
-            }
-            100% {
-             color: #FF4136;
-            }
-          }
 
           ul{
             display: flex;
@@ -68,9 +56,29 @@ const Navbar = () => {
             font-size: 14px;  
             font-family: 'work sans',sans-serif;
           }
-
+         
           a:hover{
-            color: orange;
+            animation: waves 3s ease-out 0s alternate infinite;
+          }
+          @keyframes waves{
+            0% {
+              color: #eee;
+            }
+            50%{
+              color: #e9c46a;
+            }
+            100% {
+             color: #FF4136;
+            }
+          }
+          @media(max-width:700px){
+            nav, ul, li{
+              justify-content: center;
+              text-align: center;
+              margin-right: 1.5em;
+              align-content:left;
+              font-size: 12px;
+            }
           }
          
 
@@ -79,17 +87,14 @@ const Navbar = () => {
   
       <ul>
       <li>
-        <Link href='/'>
-        <a title='Home'>
+        <a onClick={()=>(swapDivs('content-text','my-video'))} title='Home'>
           Home
         </a>
-      </Link>
       </li>
-      <li><Link href='/watch'>
-        <a title='Watch'>
+      <li>
+        <a onClick={()=>(swapDivs('content-text','my-video'))}  title='Watch'>
           Watch
         </a>
-      </Link>
       </li>
       <li>
       <Link href='/#awards'>

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import swapDivs from '../helperFuncs/swap'
+import swapDivs from '../helperFuncs/swap';
 import BgImg from '../images/IMG_0085.jpeg';
 import Crew from '../sections/crew';
 import Awards from '../sections/awards';
@@ -98,14 +98,37 @@ const Home = () => (
         .break{
           height: 2em;
         }
+        .video-js{
+          background: black;
+        }
         #my-video{
-          width: 100%;
-          height: 60%;
+          width:100vw;
+          height:100vh;
           display: none;
       }
 
         #awards{
-          background: #eef;
+          background: transparent;
+          height: auto;
+          width: 100vw;
+          margin-bottom: 50px;
+        }
+        @media(max-width: 700px){
+          #content{
+            animation: none;
+          }
+          #content-text h2{
+            font-size: 1.2em;
+          }
+          #content-text p{
+            font-size: 12px;
+            font-family: 'Arial',sans-serif;
+          }
+          #my-video{
+            height: 100%;
+            border: none;
+            margin-top: 0;
+          }
         }
 
 
@@ -119,20 +142,19 @@ const Home = () => (
 		</Head>
 		<header>
 			<div id="content">
-        <div id='content-text'>
-				<h2>Burning Man:The Build</h2>
-				<p>
-					{' '}
-					a short film about the art of Burning Man
-					<div className="break" />
-				
-            <a onClick={()=>swapDivs('content-text','my-video')}
-              title="Watch">Watch</a>
-					
-				</p>
-        </div>
+				<div id="content-text">
+					<h2>Burning Man:The Build</h2>
+					<p>
+						{' '}
+						a short film about the art of Burning Man
+						<div className="break" />
+						<a onClick={() => swapDivs('content-text', 'my-video')} title="Watch">
+							Watch
+						</a>
+					</p>
+				</div>
 				<div>
-					<video id="my-video" className="video-js" controls preload="auto">
+					<video id="my-video" className="video-js" frameBorder="0" controls preload="auto">
 						<source src="https://mattemmi.s3.amazonaws.com/1767551805.mp4" type="video/mp4" />
 					</video>
 				</div>

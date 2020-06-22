@@ -52,6 +52,7 @@ const Crew = () => (
           color: white;
           postion: relative;
           animation: slide-left 3s;
+          margin-bottom: 75px;
         }
         @keyframes slide-left{
             from {
@@ -64,14 +65,19 @@ const Crew = () => (
             }
             }
         }
+        @media(max-width:700px){
+          .content h2{
+            font-size: 1.2em
+          }
+          .content p{
+            font-size: 8px;
+          }
+        }
         
       `}
     </style>
     <Head>
-      <script
-        src="https://kit.fontawesome.com/6f92a9206c.js"
-        crossOrigin="anonymous"
-      />
+
       <meta name="description" content="" />
       <title>Burning Man</title>
     </Head>

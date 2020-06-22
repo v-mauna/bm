@@ -19,6 +19,9 @@ const BehindTheScenes = () => (
         .container {
           display: flex;
           flex-wrap: wrap;
+          justify-content: center;
+          align-content: center;
+          text-align:
           box-sizing: border-box;
           font-size: 16px;
           width: 100vw;
@@ -29,26 +32,26 @@ const BehindTheScenes = () => (
 
         .behindTheScenes{
           position: relative;
-          justify-content: center;
-          text-align: center;
-          align-content: center;
           display: flex;
           width: 100vw;
-          background: #eef;
+          background: rgb(230,230,230);
           flex-direction: row;
           padding: 1;
           margin: 1;
           box-sizing: border-box;
-          animation: slide-left 1s;
         }
 
         .content {
           margin-top: 2em;
           width: 100vw;
           height: auto;
+          justify-content: center;
+          align-content: center;
+          text-align: center;
           display: flex;
           flex-wrap: wrap;
           color: black;
+          margin: auto;
           animation: slide-left 2s;
         }
 
@@ -65,10 +68,18 @@ const BehindTheScenes = () => (
         }
 
         .content img{
-            width: 50%;
+            width: 40%;
             margin: 1em;
             height: auto;
            padding: 1em;
+        }
+        @media(max-width:700px){
+          .content img{
+            width: 90%;
+            height: 90%;
+            margin: 0;
+            padding: 1em;
+          }
         }
         
       `}
@@ -81,9 +92,7 @@ const BehindTheScenes = () => (
 		<section className="behindTheScenes">
 			<div className="content">
 				{imgsArray.map((image) => (
-					<div>
 						<img src={image} alt="Behind The Scenes Image" />
-					</div>
 				))}
 			</div>
 		</section>
