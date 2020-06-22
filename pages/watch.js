@@ -16,7 +16,7 @@ const Watch = () => (
                         width: 100vw;
                         height: 100vh;
 						background: black;
-						line-height: 1.5em;
+						overflow: hidden;
 					}
 					header {
 						display: flex;
@@ -31,7 +31,6 @@ const Watch = () => (
                     video{
                         width: 100%;
                         height: 100%;
-                        padding: 1em;
                     }
 
 				`}

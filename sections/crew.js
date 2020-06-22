@@ -84,7 +84,8 @@ const Crew = () => (
           ADDITIONAL FOOTAGE FROM: Adrenorama Mayan Warrior<br/>
           MUSIC: Ezio Aguiar<br/>
           AUDIO ENGINEER: Asha Iwanowicz<br/>
-         PRODUCER/NARRATOR/EDITOR: Eddie Schneckloth<br/>
+          NARRATOR: Mac McLean<br/>
+         PRODUCER/EDITOR: Eddie Schneckloth<br/>
         </p>
       </div>
     </section>

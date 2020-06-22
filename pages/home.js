@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
+import swapDivs from '../helperFuncs/swap'
 import BgImg from '../images/IMG_0085.jpeg';
-import Crew from '../sections/crew'
-import Awards from '../sections/awards'
+import Crew from '../sections/crew';
+import Awards from '../sections/awards';
 import BehindTheScenes from '../sections/behindTheScenes';
-
 
 const Home = () => (
 	<div className="container">
@@ -35,7 +35,7 @@ const Home = () => (
           animation: slide-left 1s;
         }
 
-        .content {
+        #content {
           font-family: 'Lato', sans-serif;
           font-weight: 800;
           letter-spacing: 3px;
@@ -47,7 +47,7 @@ const Home = () => (
           text-align: center;
         }
 
-        .content h2 {
+        #content h2 {
           color: white;
           font-family: 'Lexend Tera', sans-serif;
           text-transform: uppercase;
@@ -56,14 +56,14 @@ const Home = () => (
           font-size: 40px;
           animation: slide-left 2s;
         }
-        .content p {
+        #content p {
           font-family: 'Work Sans', sans-serif;
           font-size: 16px;
           color: white;
           postion: relative;
           animation: slide-left 3s;
         }
-        .content a {
+        #content a {
           color: white;
           background: black;
           font-size: 12px;
@@ -98,6 +98,12 @@ const Home = () => (
         .break{
           height: 2em;
         }
+        #my-video{
+          width: 100%;
+          height: 60%;
+          display: none;
+      }
+
         #awards{
           background: #eef;
         }
@@ -107,33 +113,40 @@ const Home = () => (
 		</style>
 		<Head>
 			<script src="https://kit.fontawesome.com/6f92a9206c.js" crossOrigin="anonymous" />
-      <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
+			<link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
 			<meta name="description" content="" />
 			<title>Burning Man</title>
 		</Head>
 		<header>
-			<div className="content">
+			<div id="content">
+        <div id='content-text'>
 				<h2>Burning Man:The Build</h2>
 				<p>
 					{' '}
 					a short film about the art of Burning Man
 					<div className="break" />
-          <Link href='/watch'>
-          <a title='Watch'>Watch</a>
-          </Link>
+				
+            <a onClick={()=>swapDivs('content-text','my-video')}
+              title="Watch">Watch</a>
+					
 				</p>
-      </div>
+        </div>
+				<div>
+					<video id="my-video" className="video-js" controls preload="auto">
+						<source src="https://mattemmi.s3.amazonaws.com/1767551805.mp4" type="video/mp4" />
+					</video>
+				</div>
+			</div>
 		</header>
-    <section id="awards">
-			<Awards/>
+		<section id="awards">
+			<Awards />
 		</section>
 		<section id="crew">
-			<Crew/>
+			<Crew />
 		</section>
-    <section id="behindTheScenes">
-			<BehindTheScenes/>
+		<section id="behindTheScenes">
+			<BehindTheScenes />
 		</section>
-    
 	</div>
 );
 
