@@ -16,9 +16,6 @@ const Crew = () => (
           font-size: 16px;
           width: 100vw;
           margin-top: 1em;
-          justify-content: center;
-          text-align: center;
-          align-content: center;
           line-height: 1.5em;
         }
         .content {
@@ -66,11 +63,18 @@ const Crew = () => (
             }
         }
         @media(max-width:700px){
+          .content{
+            justify-content: left;
+            text-align: left;
+            align-content: left;
+            letter-spacing: 0px;
+          }
           .content h2{
             font-size: 1.2em
           }
           .content p{
             font-size: 8px;
+
           }
         }
         
