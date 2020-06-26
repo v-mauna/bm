@@ -12,7 +12,7 @@ const Crew = () => (
           flex-direction: column;
           justify-content: center;
           align-content: center;
-          animation: slideUp 4s;
+          animation: slideUp 6s;
         }
         .title h2{
           color: white;
