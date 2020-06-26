@@ -7,12 +7,12 @@ import Image5 from '../images/IMG_0139.jpeg';
 import Image6 from '../images/IMG_0143.jpeg';
 import Image7 from '../images/IMG_6019.jpg';
 import Image8 from '../images/IMG_6036.jpg';
-import Image9 from '../images/IMG_2787.jpg'
-import Image10 from '../images/IMG_2817.jpg'
-import Image11 from '../images/IMG_2675.jpg'
-import Image12 from '../images/IMG_6133.jpg'
+import Image9 from '../images/IMG_2787.jpg';
+import Image10 from '../images/IMG_2817.jpg';
+import Image11 from '../images/IMG_2675.jpg';
+import Image12 from '../images/IMG_6133.jpg';
 
-const imgsArray = [ Image1, Image2, Image11,Image10, Image3, Image4, Image5, Image6, Image7, Image8 ];
+const imgsArray = [ Image1, Image2, Image11, Image10, Image3, Image4, Image5, Image6, Image7, Image8 ];
 
 const BehindTheScenes = () => (
 	<div className="container">
@@ -26,19 +26,19 @@ const BehindTheScenes = () => (
           justify-content: center;
           align-content: center;
           text-align:
+          
           box-sizing: border-box;
           font-size: 16px;
           width: 100vw;
           height: auto;
-          margin-top: 2em;
-          line-height: 1.5em;
         }
 
         .behindTheScenes{
+          border-top: 1px solid black;
           position: relative;
           display: flex;
           width: 100vw;
-          background: rgb(230,230,230);
+          background: #e9ecef;
           flex-direction: row;
           padding: 1;
           box-sizing: border-box;
@@ -57,6 +57,66 @@ const BehindTheScenes = () => (
           animation: slide-left 2s;
         }
 
+        
+        #img-container{
+          position: relative;
+          overflow: hidden;
+          position: relative;
+          justify-content: center;
+          align-content: center;
+          text-align: center;
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          margin: auto;
+        }
+
+        #project-logo {
+          display: flex;
+          box-sizing: border-box;
+          flex-wrap: wrap;
+          width: 50%;
+          margin: 1.5em;
+          padding: 0;
+
+          overflow: hidden;
+        }
+        
+        #img-overlay{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 50%;
+          margin: auto;
+          padding: 0;
+          opacity: 0;
+          transition: .5s ease;
+        }
+        #img-container:hover #project-logo{
+          opacity: .8;
+        }
+        #img-container:hover #img-overlay{
+          opacity: 1;
+        }
+        
+        #img-overlay-text{
+          color: white;
+          font-size: 1em;
+          position: absolute;
+          text-transform: uppercase;
+          font-family: 'Archivo Black', sans-serif;
+          top: 50%;
+          left: 50%;
+          padding: 1em;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+
         @keyframes slide-left{
             from {
               margin-left: 100%;
@@ -69,12 +129,7 @@ const BehindTheScenes = () => (
             }
         }
 
-        .content img{
-            width: 40%;
-            margin: 1em;
-            height: auto;
-           padding: 1em;
-        }
+
         @media(max-width:700px){
           .content img{
             width: 90%;
@@ -93,9 +148,54 @@ const BehindTheScenes = () => (
 		</Head>
 		<section className="behindTheScenes">
 			<div className="content">
-				{imgsArray.map((image) => (
-						<img src={image} alt="Behind The Scenes Image" />
-				))}
+				<div id="img-container">
+					<img id="project-logo" src={Image1} />
+					<div id="img-overlay">
+						<p id="img-overlay-text">A surprise Wedding on the playa</p>
+					</div>
+				</div>
+				<div id="img-container">
+					<img id="project-logo" src={Image2} />
+					<div id="img-overlay">
+						<p id="img-overlay-text">The Mayan Warrior Art Car at night</p>
+					</div>
+				</div>
+				<div id="img-container">
+					<img id="project-logo" src={Image10} />
+					<div id="img-overlay">
+						<p id="img-overlay-text">Catching drones after sunset</p>
+					</div>
+				</div>
+				<div id="img-container">
+					<img id="project-logo" src={Image3} />
+					<div id="img-overlay">
+						<p id="img-overlay-text">Euterpe and Abraxas at sunset</p>
+					</div>
+				</div>
+				<div id="img-container">
+					<img id="project-logo" src={Image4} />
+					<div id="img-overlay">
+						<p id="img-overlay-text">Garage Mahal with friends</p>
+					</div>
+				</div>
+				<div id="img-container">
+					<img id="project-logo" src={Image5} />
+					<div id="img-overlay">
+						<p id="img-overlay-text">Robot ♡ welcomes sunrise</p>
+					</div>
+				</div>
+				<div id="img-container">
+					<img id="project-logo" src={Image7} />
+					<div id="img-overlay">
+						<p id="img-overlay-text">Daily Duststorms</p>
+					</div>
+				</div>
+				<div id="img-container">
+					<img id="project-logo" src={Image8} />
+					<div id="img-overlay">
+						<p id="img-overlay-text">The Build Production team </p>
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>

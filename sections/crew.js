@@ -8,6 +8,7 @@ const Crew = () => (
       @import url('https://unpkg.com/aos@next/dist/aos.css')
       @import url('https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans&family=Lexend+Tera&family=Archivo+Black&display=swap');
         #container {
+          background: white;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -15,7 +16,6 @@ const Crew = () => (
           animation: slideUp 6s;
         }
         .title h2{
-          color: white;
           font-family: 'Work Sans', sans-serif;
           text-transform: uppercase;
           width: 100vw;
@@ -28,7 +28,6 @@ const Crew = () => (
         #content{
           display: flex:
           width: 100vw;
-          margin-bottom: 50px;
           
         }
         @keyframes slideUp {
@@ -50,8 +49,7 @@ const Crew = () => (
           justify-content: center;
           align-content: center;
           text-transform: lowercase;
-          color: white;
-          margin-bottom: 75px;
+          color: black;
         }
         .headings:first-child {
           margin-right: 10px;
@@ -64,7 +62,7 @@ const Crew = () => (
           letter-spacing: 3px;
           font-size: 16px;
           text-transform: uppercase;
-          color: white;
+          margin-bottom: 50px;
         }
 
         @keyframes slide-left{

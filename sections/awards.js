@@ -13,10 +13,10 @@ const Awards = () => (
                     flex-wrap: wrap;
 					letter-spacing: 3px;
 					width: 100vw;
-					margin: 0;
+					margin-top: 0;
 					height: auto;
-					background: rgba(0,0,0,.2);
 					justify-content: center;
+					border-bottom: 1px solid black;
 				}
 				.nycDff{
 					width: 100vw;
@@ -24,7 +24,6 @@ const Awards = () => (
 					margin: 0;
 					display: flex;
 					flex-wrap: wrap;
-					background: rgba(0,0,0,.2);
 					justify-content: center;
 				}
 				#nycDff{
@@ -34,23 +33,19 @@ const Awards = () => (
 				}
 				.laurels img {
 					position: relative;
-					width: 190px;
+					width: 180px;
 					padding: .5em;
 					height: 140px;
 					
                 }
                 .laurels img:first-child{
                     margin-left: 2.5%;
+				}
+				.laurels img:last-child{
+                    margin-bottom: 50px;
                 }
 			`}
 		</style>
-			
-				<div className='nycDff'>
-				<img src={NYCDFF}
-				id='nycDff'
-				alt="New York City Drone Film Festival - Winner - News and Documentary - 2019"
-				/>
-				</div>
 				<div className="laurels">
 				<img
 					src="https://mattemmi.s3.amazonaws.com/AWARD+WINNER+-+NO+AR+Drone+Film+Fest+Brazil+-+2019.png"

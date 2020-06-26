@@ -19,7 +19,6 @@ const Home = () => (
           box-sizing: border-box;
           font-size: 16px;
           width: 100vw;
-          margin-top: 1em;
           line-height: 1.5em;
         }
         header {
@@ -109,7 +108,7 @@ const Home = () => (
       }
 
         #awards{
-          background: rgb(230,230,230);
+          background: #f4f3ee;
           height: fit-content;
           width: 100vw;
         }

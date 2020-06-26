@@ -11,7 +11,6 @@ const Index = () => (
   html,
   body {
     padding: 0;
-    background: black;
     margin: 0;
     display: flex;
     flex-direction: column;
