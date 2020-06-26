@@ -1,54 +1,90 @@
-import NYCDFF from '../images/NYCDFF.png' 
+import Blue from '../images/Blue2Blue.png'
 import NewMedia from '../images/NewMedia.png'
-import Blue2Blue from '../images/Blue2Blue.png'
-import BgImg from '../images/Untitled.jpg'
+import NYCDFF from '../images/NYCDFF.png'
+import KFF from '../images/KFF.jpg'
+
 const Awards = () => (
-	<div className="container">
+	<div>
 		<style jsx>
 			{`
-				.container {
-					display: flex;
-					flex-direction: column;
-					flex-wrap: wrap;
-					box-sizing: border-box;
-					width: 100vw;
-					height: auto;
-                    margin: auto;
-				}
-
+				@import 'https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans&family=Lexend+Tera&family=Archivo+Black&display=swap';
 				.laurels {
                     display: flex;
                     flex-wrap: wrap;
-					min-width: 100vw;
-					padding: 2em;
-					height: 300px;
-					background-color: rgb(230,230,230);
-					background:url(${BgImg});
-					background-size: cover;
-					background-repeat: no-repeat
+					letter-spacing: 3px;
+					width: 100vw;
+					margin: 0;
+					height: auto;
+					background: rgba(0,0,0,.2);
+					justify-content: center;
 				}
-
+				.nycDff{
+					width: 100vw;
+					height: auto;
+					margin: 0;
+					display: flex;
+					flex-wrap: wrap;
+					background: rgba(0,0,0,.2);
+					justify-content: center;
+				}
+				#nycDff{
+					width: 250px;
+					height: 170px;
+					margin: 0;
+				}
 				.laurels img {
-					width: 180px;
+					position: relative;
+					width: 190px;
+					padding: .5em;
 					height: 140px;
+					
                 }
                 .laurels img:first-child{
                     margin-left: 2.5%;
-				}
-				@media(max-width: 700px){
-					.laurels{
-						background-size:contain;
-						height:100px;
-						width: 100vw;
-					}
-				}
+                }
 			`}
 		</style>
-		<section>
-			<div className="laurels">
-				
+			
+				<div className='nycDff'>
+				<img src={NYCDFF}
+				id='nycDff'
+				alt="New York City Drone Film Festival - Winner - News and Documentary - 2019"
+				/>
+				</div>
+				<div className="laurels">
+				<img
+					src="https://mattemmi.s3.amazonaws.com/AWARD+WINNER+-+NO+AR+Drone+Film+Fest+Brazil+-+2019.png"
+					alt="No AR Drone Film Festival - Brazil Laurel"
+				/>
+				<img
+					src="https://mattemmi.s3.amazonaws.com/BEST+DRONE+-+New+Media+Film+Festival+-+2019.png"
+					alt="2019 New Media Festival - Best Drone Laurel "
+				/>
+				<img
+					src="https://mattemmi.s3.amazonaws.com/OFFICIAL+SELECTION+-+New+Vision+International+Film+Festival+-+2019.png"
+					alt="New Vision International Film Festival - Official Selection 2019"
+				/>
+				<img
+					src="https://mattemmi.s3.amazonaws.com/OFFICIAL+SELECTION+-+Oaxaca+FilmFest+-+2019.png"
+					alt="Oaxaca Film Festival - Official Selection 2019"
+				/>
+				<img
+					src="https://mattemmi.s3.amazonaws.com/OFFICIAL+SELECTION+-+Shorts+On+Tap+-+2019.png"
+					alt="Shorts On Tap Film Festival - Official Selection 2019"
+				/>
+				<img
+					src="https://mattemmi.s3.amazonaws.com/TOP+50+-+PEUGEOT+Drone+Film+Festival+-+2019.png"
+					alt="Peugeot Drone Film Festival - Top 50 Selection 2019"
+				/>
+                <img
+					src="https://mattemmi.s3.amazonaws.com/WINNER+NEWS++DOCS+-+New+York+City+Drone+Film+Festival+-+2019.png"
+					alt="New York City Drone Film Festival - Winner - News and Documentary - 2019"
+				/>
+				<img
+					src={Blue}
+					alt="Blue2Blue Drone Film Festival - Finalist - 2019"
+				/>
 			</div>
-		</section>
 	</div>
 );
 

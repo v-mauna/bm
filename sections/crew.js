@@ -1,56 +1,72 @@
 import Head from 'next/head';
-import img1 from '../images/FJX17202.jpg';
-import img2 from '../images/IMG_2527.jpg';
-import img3 from '../images//IMG_6036.jpg';
-import img4 from '../images/IMG_0124.jpeg';
-import img5 from '../images/IMG_0128.jpeg';
+import AOS from 'aos';
+
 const Crew = () => (
-  <div className="container">
-    <style jsx>
+	<div id="container" >
+		<style jsx>
       {`
+      @import url('https://unpkg.com/aos@next/dist/aos.css')
       @import url('https://fonts.googleapis.com/css2?family=Lato&family=Work+Sans&family=Lexend+Tera&family=Archivo+Black&display=swap');
-        .container {
-          display: flex;
-          flex-wrap: wrap;
-          box-sizing: border-box;
-          font-size: 16px;
-          width: 100vw;
-          margin-top: 1em;
-          line-height: 1.5em;
-        }
-        .content {
+        #container {
           display: flex;
           flex-direction: column;
-          flex-wrap: wrap;
-          font-family: 'Work Sans', sans-serif;
-          font-weight: 800;
-          letter-spacing: 3px;
-          width: 100vw;
-          height: auto;
-          padding: 1em;
           justify-content: center;
-          text-align: center;
           align-content: center;
-          animation: slide-left 1s;
+          animation: slideUp 4s;
         }
-
-        .content h2 {
+        .title h2{
           color: white;
           font-family: 'Work Sans', sans-serif;
           text-transform: uppercase;
-          postion: absolute;
-          top: 0;
+          width: 100vw;
+          display: flex
+          margin: auto;
+          letter-spacing: 3px;
+          text-align: center;
           font-size: 40px;
-          animation: slide-left 2s;
         }
-        .content p {
+        #content{
+          display: flex:
+          width: 100vw;
+          margin-bottom: 50px;
+          
+        }
+        @keyframes slideUp {
+          from {
+            transform: translateY(100%);
+          }
+        
+          to {
+            transform: translateY(0%);
+          }
+        }
+        .headings {
           font-family: 'Work Sans', sans-serif;
           font-size: 16px;
+          font-weight: 800;
+          width: 50%;
+          text-align: right;
+          letter-spacing: 3px;
+          justify-content: center;
+          align-content: center;
+          text-transform: lowercase;
           color: white;
-          postion: relative;
-          animation: slide-left 3s;
           margin-bottom: 75px;
         }
+        .headings:first-child {
+          margin-right: 10px;
+      } 
+
+        .names{
+          width: 50%;
+          font-weight: 800;
+          font-family: 'Work Sans', sans-serif;
+          letter-spacing: 3px;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: white;
+        }
+
         @keyframes slide-left{
             from {
               margin-left: 100%;
@@ -79,27 +95,45 @@ const Crew = () => (
         }
         
       `}
-    </style>
-    <Head>
-
-      <meta name="description" content="" />
-      <title>Burning Man</title>
-    </Head>
-    <section>
-      <div className="content">
-        <h2>Crew</h2>
-        <p>
-          AERIAL FOOTAGE: Matt Emmi<br/>
-          FEATURING FOOTAGE FROM: Ignite: A Burning Man Experience<br/>
-          ADDITIONAL FOOTAGE FROM: Adrenorama Mayan Warrior<br/>
-          MUSIC: Ezio Aguiar<br/>
-          AUDIO ENGINEER: Asha Iwanowicz<br/>
-          NARRATOR: Mac McLean<br/>
-         PRODUCER/EDITOR: Eddie Schneckloth<br/>
-        </p>
-      </div>
-    </section>
-  </div>
+		</style>
+		<Head>
+			<meta name="description" content="" />
+			<title>Burning Man</title>
+      <link rel="stylesheet" href="" />
+		</Head>
+		<div className="title">
+			<h2>Crew</h2>
+		</div>
+		<div id="content">
+			<div className="headings">
+				<p>
+					Aerial Footage:<br />
+					FEATURING FOOTAGE FROM:<br />
+					ADDITIONAL FOOTAGE FROM:<br />
+					AUDIO ENGINEER:<br />
+					NARRATOR:<br />
+					PRODUCER/EDITOR:<br />
+					Composition:<br />
+					Music:<br />
+				</p>
+			</div>
+			<div className="names">
+				<p>
+					Matt Emmi<br />
+					Ignite: A Burning Man Experience<br />
+					Adrenorama Mayan Warrior<br />
+					Asha Iwanowicz<br />
+					Mac McLean<br />
+					Eddie Schneckloth<br />
+					Ezio Aguiar<br />
+					Tinush - Journey (Original)<br />
+					Esteble - Buchlapest (Original Mix)<br />
+					Ed Ed - Namaimo<br />
+					Kid Atari - Intro (Detmolt Edit)<br />
+				</p>
+			</div>
+		</div>
+	</div>
 );
 
 export default Crew;

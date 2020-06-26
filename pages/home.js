@@ -68,6 +68,7 @@ const Home = () => (
           background: black;
           font-size: 12px;
           width: 200px;
+          font-weight: 800;
           margin-top: 2em;
           text-align: center;
           text-decoration: none;
@@ -90,7 +91,7 @@ const Home = () => (
         }
         }
 
-        .content a:hover {
+        #content a:hover {
           background: white;
           color: black;
 
@@ -108,10 +109,9 @@ const Home = () => (
       }
 
         #awards{
-          background: transparent;
-          height: auto;
+          background: rgb(230,230,230);
+          height: fit-content;
           width: 100vw;
-          margin-bottom: 50px;
         }
         @media(max-width: 700px){
           #content{
@@ -135,7 +135,6 @@ const Home = () => (
       `}
 		</style>
 		<Head>
-			<script src="https://kit.fontawesome.com/6f92a9206c.js" crossOrigin="anonymous" />
 			<link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
 			<meta name="description" content="" />
 			<title>Burning Man</title>

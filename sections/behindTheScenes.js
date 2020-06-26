@@ -7,8 +7,12 @@ import Image5 from '../images/IMG_0139.jpeg';
 import Image6 from '../images/IMG_0143.jpeg';
 import Image7 from '../images/IMG_6019.jpg';
 import Image8 from '../images/IMG_6036.jpg';
+import Image9 from '../images/IMG_2787.jpg'
+import Image10 from '../images/IMG_2817.jpg'
+import Image11 from '../images/IMG_2675.jpg'
+import Image12 from '../images/IMG_6133.jpg'
 
-const imgsArray = [ Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8 ];
+const imgsArray = [ Image1, Image2, Image11,Image10, Image3, Image4, Image5, Image6, Image7, Image8 ];
 
 const BehindTheScenes = () => (
 	<div className="container">
@@ -26,7 +30,7 @@ const BehindTheScenes = () => (
           font-size: 16px;
           width: 100vw;
           height: auto;
-          margin-top: 1em;
+          margin-top: 2em;
           line-height: 1.5em;
         }
 
@@ -37,12 +41,11 @@ const BehindTheScenes = () => (
           background: rgb(230,230,230);
           flex-direction: row;
           padding: 1;
-          margin: 1;
           box-sizing: border-box;
         }
 
         .content {
-          margin-top: 2em;
+          margin-top: 3.5em;
           width: 100vw;
           height: auto;
           justify-content: center;
@@ -51,7 +54,6 @@ const BehindTheScenes = () => (
           display: flex;
           flex-wrap: wrap;
           color: black;
-          margin: auto;
           animation: slide-left 2s;
         }
 
