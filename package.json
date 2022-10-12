@@ -30,6 +30,6 @@
     "eslint-plugin-react-hooks": "^2.5.0",
     "next-videos": "1.1.4",
     "prettier": "^2.0.5",
-    "video.js": "^7.8.2"
+    "video.js": "^7.20.3"
   }
 }
